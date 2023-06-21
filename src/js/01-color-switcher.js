@@ -9,19 +9,23 @@ function getRandomHexColor() {
 }
 
 buttonStop.setAttribute('disabled', '');
+function toggleButtons() {
+  buttonStart.toggleAttribute('disabled');
+  buttonStop.toggleAttribute('disabled');
+}
 
-buttonStart.addEventListener('click', element => {
-  element.target.setAttribute('disabled', true);
-  buttonStop.removeAttribute('disabled');
+function changeColor() {
+  bodyChangeColor.style.backgroundColor = getRandomHexColor();
+}
 
-  intervalId = setInterval(() => {
-    bodyChangeColor.style.backgroundColor = getRandomHexColor();
-  }, 1000);
+buttonStart.addEventListener('click', () => {
+  toggleButtons();
+  intervalId = setInterval(changeColor, 1000);
 });
 
-buttonStop.addEventListener('click', element => {
-  element.target.setAttribute('disabled', true);
-  buttonStart.removeAttribute('disabled');
-
+buttonStop.addEventListener('click', () => {
+  toggleButtons();
   clearInterval(intervalId);
 });
+
+

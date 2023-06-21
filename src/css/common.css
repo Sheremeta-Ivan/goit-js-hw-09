@@ -110,6 +110,9 @@ a:hover {
     inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
 }
+.custom-btn[disabled] {
+  cursor: not-allowed;
+}
 .timer-wrap {
   display: flex;
   justify-content: center;
@@ -248,3 +251,4 @@ a:hover {
   outline: none;
   border-radius: 4px;
 }
+
