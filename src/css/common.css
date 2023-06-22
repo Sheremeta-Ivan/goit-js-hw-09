@@ -196,9 +196,10 @@ a:hover {
 
 .btn-start:disabled {
   margin: 0 20px;
-  background-color: #58f5f7;
+  background-color: #eb1010;
   border: 2px solid #fff352;
-  color: black;
+  color: white;
+  cursor: not-allowed;
   box-shadow: none;
 }
 
